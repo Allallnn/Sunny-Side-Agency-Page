@@ -31,6 +31,7 @@ body {
   background-color: var(--White);
   line-height: 1.6;
   font-size: 16px;
+  min-height: 100%;
 }
 
 header {
@@ -101,29 +102,39 @@ header {
   margin-top: 3rem;
 }
 
+/* Main  */
+main{
+  min-height: 100%;
+}
 /* Section Layout */
 .section-1, .section-2 {
   display: grid;
   grid-template-columns: 1fr 1fr;
   max-width: 1920px;
   margin: 0 auto;
-  height: 540px; /* Half of 1080p */
+}
+.section-2{
 }
 
 #section-1-text-div, #section-2-text-div {
-  padding: 5rem;
+  padding: 0 5rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   background-color: white;
+  display: flex;
+  flex-direction: column;
+  /* border: 10px solid rebeccapurple; */
+  position: relative;
+  z-index: 1;
 }
 
 #section-1-text-div h1,
 #section-2-text-div h1 {
   font-family: 'Fraunces', serif;
   font-size: 2.5rem;
-  color: hsl(212, 27%, 19%);
-  margin-bottom: 1.5rem;
+  color: var(--Very-dark-desaturated-blue);
+
 }
 
 #section-1-text-div p,
@@ -138,7 +149,7 @@ header {
   font-weight: 700;
   text-decoration: none;
   font-size: 0.9rem;
-  color: hsl(212, 27%, 19%);
+  color: var(--Very-dark-desaturated-blue);
   border-bottom: 2px solid hsl(51, 100%, 49%);
   width: fit-content;
   padding-bottom: 4px;
@@ -170,6 +181,7 @@ header {
   flex-direction: row;
   width: 100%;
   text-align: center;
+  height: 50rem;
 }
 
 .section-3 div {
@@ -180,18 +192,21 @@ header {
   justify-content: flex-end;
   align-items: center;
   color: var(--White);
-  height: 540px;
+  min-height: 100%;
+}
+
+#section-3-img-div-1 {
+  background-image: url(assets/Desktop/Image20250429172128.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
 
-#section-3-img-div-1 {
-  background-image: url(assets/Desktop/Image20250429172128.jpg);
-}
-
 #section-3-img-div-2 {
   background-image: url(assets/Desktop/Image20250429172135.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .section-3 h1 {
@@ -219,10 +234,11 @@ header {
 
 #section-4-div {
   font-family: "Fraunces", serif;
-  font-size: 2rem;
+  font-size: 1.5rem;
   letter-spacing: 3px;
-  color: var(--Very-dark-desaturated-blue);
+  color: var(--Grayish-blue);
   margin-bottom: 60px;
+  font-weight: 700;
 }
 
 #testimonies {
@@ -249,10 +265,12 @@ header {
 }
 
 #testimonies p {
-  font-size: 0.95rem;
+  font-family: var(--font-body);
+  font-size: 1rem;
   line-height: 1.6;
-  color: var(--Very-dark-grayish-blue);
+  color: var(--Very-dark-desaturated-blue);
   margin-bottom: 25px;
+  font-weight: 500;
 }
 
 #testimonies h3 {
@@ -288,7 +306,7 @@ footer {
 }
 
 footer h2 {
-  font-family: var(--font-headings);
+  font-family: var(--font-body);
   font-size: 2rem;
   margin-bottom: 1rem;
 }
