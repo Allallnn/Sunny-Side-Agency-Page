@@ -354,6 +354,7 @@ align-items: center;
   width: 5rem;
   justify-content: center;
   gap: 12rem;
+  margin-bottom: 1rem;
 }
 
   #nav {
@@ -381,7 +382,7 @@ display: none;
   flex-direction: column;
 }
 #nav-div img{
-  height: 8rem;
+  height: 7.5rem;
   width: 2rem;
 
 }
@@ -390,6 +391,8 @@ display: none;
     line-height: normal;
     padding: 0;
     margin: 0;
+    letter-spacing: 0.3rem;
+    font-weight: 900;
   }
 
   /* Section Layout */
